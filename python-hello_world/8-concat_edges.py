@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 str = "Python is an interpreted, interactive, object-oriented programming language that combines remarkable power with very clear syntax"
-with_word = str[65:69]
-python_word = str[7:13]
-print(str[33:54] + " " + with_word + " " + python_word)
+str1 = str[39:66]
+str2 = str[107:111]
+str3 = str[0:6]
+print(f"{str1} {str2} {str3}")
