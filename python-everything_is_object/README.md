@@ -1,0 +1,1 @@
+Readme file for the everything is object folder. Intranet assignment
