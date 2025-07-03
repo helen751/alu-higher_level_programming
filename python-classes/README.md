@@ -1,11 +1,13 @@
-# Python Classes - Square
+# Python Classes: Square
 
-This folder contains Python scripts that define a `Square` class with different functionalities, including:
+This directory contains Python files that define a `Square` class with increasing complexity per task:
 
-- Initializing squares with or without size
-- Validating input
-- Calculating area
-- Printing the square visually
-- Handling position of print output
+- Task 0: Empty class
+- Task 1: Private size attribute
+- Task 2: Size validation
+- Task 3: Area computation
+- Task 4: Getter and setter for size
+- Task 5: Print square visually
+- Task 6: Handle square position when printing
 
-Each script corresponds to a task incrementally improving the `Square` class.
+Each script passes PEP8 validation and adheres strictly to the task requirements.
