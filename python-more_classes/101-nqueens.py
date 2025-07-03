@@ -43,4 +43,3 @@ if __name__ == "__main__":
         sys.exit(1)
     board = [-1 for i in range(n)]
     solve(n, 0, board)
- 
