@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""LockedClass module.
-Defines a LockedClass that only allows setting 'first_name' as a new attribute.
-"""
+"""Defines a LockedClass that only allows 'first_name' as an attribute."""
 
 
 class LockedClass:
-    """Prevents user from creating new instance attributes except 'first_name'."""
-    __slots__ = ('first_name',)
+    """LockedClass prevents dynamic creation of attributes except 'first_name'."""
+    __slots__ = ("first_name",)
