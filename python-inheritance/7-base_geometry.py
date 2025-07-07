@@ -8,6 +8,7 @@ class BaseGeometry:
     """
     BaseGeometry class with area and integer_validator methods.
     """
+
     def area(self):
         """
         Raises Exception with message area() is not implemented.
