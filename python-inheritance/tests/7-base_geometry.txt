@@ -1,0 +1,16 @@
+Test present: check instantiation
+
+Test present: area()
+
+Test present: integer_validator()
+
+Test present: integer_validator("age")
+Test present: integer_validator("age", 1)
+Test present: integer_validator("age", 0)
+Test present: integer_validator("age", -4)
+Test present: integer_validator("age", "4")
+Test present: integer_validator("age", (4,))
+Test present: integer_validator("age", [3])
+Test present: integer_validator("age", True)
+Test present: integer_validator("age", {3, 4})
+Test present: integer_validator("age", None)
