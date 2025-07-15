@@ -1,30 +1,28 @@
 #!/usr/bin/python3
-"""
-Defines a Student class with reload_from_json.
+"""Module that defines a Student class with serialization methods.
 """
 
 
 class Student:
-    """
-    Student class.
+    """Defines a student by first_name, last_name, and age.
     """
     def __init__(self, first_name, last_name, age):
+        """Instantiate with first_name, last_name, and age."""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
+        """Returns a dict representation of the Student.
+        If attrs is a list of strings, only attributes named in this list
+        will be returned.
         """
-        Returns dictionary representation of a Student instance.
-        If attrs is a list of strings, only attributes in this list are returned.
-        """
-        if isinstance(attrs, list) and all(type(attr) == str for attr in attrs):
-            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        if isinstance(attrs, list) and all(isinstance(i, str) for i in attrs):
+            return {k: getattr(self, k)
+                    for k in attrs if hasattr(self, k)}
         return self.__dict__
 
     def reload_from_json(self, json):
-        """
-        Replaces all attributes of the Student instance from json.
-        """
-        for k, v in json.items():
-            setattr(self, k, v)
+        """Replaces all attributes of the Student instance."""
+        for key, value in json.items():
+            setattr(self, key, value)
