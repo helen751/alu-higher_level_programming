@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""POST an email to a URL using requests and print the response"""
-import requests
+"""__summary__
+- writes a script that takes in a URL and an email address
+- sends a POST request to the URL with the email as a parameter
+- and displays the body of the response (decoded in utf-8)
+"""
 import sys
+import requests
 
-url = sys.argv[1]
-email = sys.argv[2]
-data = {'email': email}
-r = requests.post(url, data=data)
-print(r.text)
+if __name__ == '__main__':
+    url = sys.argv[1]
+    value = {'email': sys.argv[2]}
+
+    reqs = requests.post(url, data=value)
+    print(reqs.text)

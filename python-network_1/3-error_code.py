@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-"""Displays the body of the response or error code if >= 400"""
-import urllib.request
-import urllib.error
-import sys
+"""__summary__
+- writes a script that takes in a URL as a command line argument
+- sends a request to the URL
+- and displays the body of the response
+"""
 
-url = sys.argv[1]
 
-try:
-    with urllib.request.urlopen(url) as response:
-        print(response.read().decode('utf-8'))
-except urllib.error.HTTPError as e:
-    print("Error code: {}".format(e.code))
+if __name__ == "__main__":
+    import sys
+    from urllib import request, error
+
+    try:
+        with request.urlopen(sys.argv[1]) as resq:
+            print(resq.read().decode('utf-8'))
+    except error.HTTPError as e:
+        print('Error code:', e.code)

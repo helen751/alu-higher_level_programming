@@ -1,11 +1,17 @@
 #!/usr/bin/python3
-"""Print body or error code if status >= 400 using requests"""
-import requests
+"""__summary__
+- writes a script that takes in a URL
+- sends a request to the URL
+- handling HTTP errors by displaying the error code
+"""
 import sys
+import requests
 
-url = sys.argv[1]
-r = requests.get(url)
-if r.status_code >= 400:
-    print("Error code: {}".format(r.status_code))
-else:
-    print(r.text)
+if __name__ == '__main__':
+    url = sys.argv[1]
+
+    reqs = requests.get(url)
+    if reqs.status_code >= 400:
+        print('Error code: {}'.format(reqs.status_code))
+    else:
+        print(reqs.text)

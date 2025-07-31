@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""Displays X-Request-Id header value from a given URL"""
-import urllib.request
+"""__summary__
+- writes a script that takes in a URL as a command line argument
+- sends a request to the URL
+- and displays the value
+"""
 import sys
+import urllib.request
 
-url = sys.argv[1]
+if __name__ == "__main__":
+    url = sys.argv[1]
 
-with urllib.request.urlopen(url) as response:
-    print(response.getheader("X-Request-Id"))
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get("X-Request-Id"))
