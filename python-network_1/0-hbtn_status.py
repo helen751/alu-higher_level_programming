@@ -24,4 +24,3 @@ except error.URLError:
     print("\t- type:", type(custom_status))
     print("\t- content:", custom_status)
     print("\t- utf8 content:", custom_status_text)
-    
