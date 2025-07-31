@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Fetches https://alu-intranet.hbtn.io/status using urllib"""
+"""Fetches a URL and displays body info (urllib, flexible URL)"""
 import urllib.request
+import sys
 
-with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
-    body = response.read()
-    print("Body response:")
-    print("\t- type: {}".format(type(body)))
-    print("\t- content: {}".format(body))
-    print("\t- utf8 content: {}".format(body.decode('utf-8')))
+if __name__ == "__main__":
+    url = sys.argv[1]
+    with urllib.request.urlopen(url) as response:
+        body = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode('utf-8')))
