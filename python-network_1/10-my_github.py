@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """__summary__
 - writes a script that takes in a GitHub username and password
 - uses the GitHub API to display the user's ID
