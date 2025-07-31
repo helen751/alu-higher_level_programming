@@ -1,3 +1,4 @@
+>>> from 101-lazy_matrix_mul import lazy_matrix_mul
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
 array([[ 7, 10],
        [15, 22]])
