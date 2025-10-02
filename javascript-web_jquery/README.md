@@ -1,0 +1,1 @@
+readme file for this directory. The codes inside this directory are solving the problems given on intranet
